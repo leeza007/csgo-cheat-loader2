@@ -11,6 +11,9 @@
 #define wx 500
 #define wy 300
 
+#define wx2 300
+#define wy2 200
+
 // Data
 static LPDIRECT3D9              g_pD3D = NULL;
 static LPDIRECT3DDEVICE9        g_pd3dDevice = NULL;
@@ -134,7 +137,7 @@ int main(int, char**)
         }
 
         if (login_window) {
-            ImGui::SetNextWindowSize({ 300, 200 });
+            ImGui::SetNextWindowSize({ wx2, wy2 });
 
             ImGui::Begin(c_xor("Login Window"), &login_window);
             ImGui::InputTextWithHint(c_xor("##user_box"), c_xor("user"), form_defs::username, IM_ARRAYSIZE(form_defs::username));
@@ -149,7 +152,7 @@ int main(int, char**)
         }
 
         if (register_window) {
-            ImGui::SetNextWindowSize({ 300, 200 });
+            ImGui::SetNextWindowSize({ wx2, wy2 });
 
             ImGui::Begin(c_xor("Register Window"), &register_window);
             ImGui::InputTextWithHint(c_xor("##user_box"), c_xor("user"), form_defs::username, IM_ARRAYSIZE(form_defs::username));
@@ -165,7 +168,7 @@ int main(int, char**)
         }
 
         if (activate_window) {
-            ImGui::SetNextWindowSize({ 300, 200 });
+            ImGui::SetNextWindowSize({ wx2, wy2 });
 
             ImGui::Begin(c_xor("Activate Window"), &activate_window);
             ImGui::InputTextWithHint(c_xor("##user_box"), c_xor("user"), form_defs::username, IM_ARRAYSIZE(form_defs::username));
